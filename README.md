@@ -98,7 +98,7 @@ To get a local copy up and running, follow these steps.
 Clone this repository to your desired folder:
 
 ```sh
-  git clone https://github.com/SergioPeralta22/math-magicians.git
+  git clone https://github.com/SergioPeralta22/MV-React.git
 ```
 
 ### Install
@@ -106,7 +106,7 @@ Clone this repository to your desired folder:
 Install this project with:
 
 ```sh
-  cd math-magicians
+  cd MV-React
   npm install
 ```
 
