@@ -29,7 +29,7 @@ const Navbar = () => {
               <span>&#8595;</span>
             </button>
             {dropdown && (
-            <ul>
+            <ul className={styles.dd}>
               <li>Design</li>
               <li>Development</li>
             </ul>
