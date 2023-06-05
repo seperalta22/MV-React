@@ -1,15 +1,14 @@
-import './App.css'
-import Header  from './components/Header'
-import TodosLogic from './components/TodosLogic'
+import './App.css';
+import Header from './components/Header';
+import TodosLogic from './components/TodosLogic';
 
 function App() {
-
   return (
     <>
-     <Header />
-     <TodosLogic />
+      <Header />
+      <TodosLogic />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
