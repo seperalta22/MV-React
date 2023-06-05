@@ -31,14 +31,16 @@ nav > ul {
   color: #212529;
 }
 
-li {
+.link {
   position: relative;
   font-size: 14px;
   padding: 0.7rem 1rem;
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }
 
-li button {
+.link button {
   border: none;
   color: inherit;
   cursor: pointer;
@@ -46,7 +48,7 @@ li button {
   background-color: transparent;
 }
 
-li > ul {
+.link > ul {
   position: absolute;
   right: 0;
   top: 46px;

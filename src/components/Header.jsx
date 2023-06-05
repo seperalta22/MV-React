@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import useOnClickOutside from '../hooks/useOnClickOutside';
 import styles from '@/styles/Header.module.css';
 
@@ -20,13 +21,19 @@ const Navbar = () => {
     <header style={headerStyle} className={styles.header}>
       <nav>
         <ul>
-          <li>Home</li>
-          <li>About</li>
+          <Link className={styles.link} to="/">
+            Home
+          </Link>
+          <Link className={styles.link} to="/about">
+            About
+          </Link>
           <li ref={ref}>
             <button type="button" onClick={() => setDropdown(!dropdown)}>
-              Services
-              {' '}
-              <span>&#8595;</span>
+              <Link className={styles.link} to="/services">
+                Services
+                {' '}
+                <span>&#8595;</span>
+              </Link>
             </button>
             {dropdown && (
             <ul className={styles.dd}>
