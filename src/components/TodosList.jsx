@@ -1,18 +1,16 @@
 import PropTypes from 'prop-types';
 import TodoItem from './TodoItem';
 
-const TodosList = ({ todos, handleChange }) => {
-	const delTodo = (id) => {
-		setTodos([
-			...todos.filter((todo) => {
-				return todo.id !== id;
-			}),
-		]);
-	};
+const TodosList = ({ todos, handleChange, delTodo }) => {
 	return (
 		<ul>
 			{todos.map((todo) => (
-				<TodoItem key={todo.id} todo={todo} handleChange={handleChange} />
+				<TodoItem
+					key={todo.id}
+					todo={todo}
+					handleChange={handleChange}
+					delTodo={delTodo}
+				/>
 			))}
 		</ul>
 	);

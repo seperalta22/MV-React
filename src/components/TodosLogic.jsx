@@ -20,6 +20,7 @@ const TodosLogic = () => {
 			completed: false,
 		},
 	]);
+
 	const handleChange = (id) => {
 		setTodos((prevState) =>
 			prevState.map((todo) => {
@@ -33,10 +34,19 @@ const TodosLogic = () => {
 			})
 		);
 	};
+
+	const delTodo = (id) => {
+		setTodos([
+			...todos.filter((todo) => {
+				return todo.id !== id;
+			}),
+		]);
+	};
+
 	return (
 		<>
 			<InputTodo />
-			<TodosList todos={todos} handleChange={handleChange} />
+			<TodosList todos={todos} handleChange={handleChange} delTodo={delTodo} />
 		</>
 	);
 };

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const TodoItem = ({ todo, handleChange }) => {
+const TodoItem = ({ todo, handleChange, delTodo }) => {
 	return (
 		<li>
 			<input
@@ -8,6 +8,7 @@ const TodoItem = ({ todo, handleChange }) => {
 				checked={todo.completed}
 				onChange={() => handleChange(todo.id)}
 			/>
+			<button onClick={() => delTodo(todo.id)}>Delete</button>
 			{todo.title}
 		</li>
 	);
