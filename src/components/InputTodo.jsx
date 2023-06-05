@@ -1,15 +1,21 @@
 import { useState } from 'react';
 
-const InputTodo = () => {
+const InputTodo = ({ addTodoItem }) => {
 	const [title, setTitle] = useState('');
+	const [message, setMessage] = useState('');
 
 	const handleChange = (e) => {
 		setTitle(e.target.value);
 	};
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		console.log(title);
-		setTitle('');
+		if (title.trim()) {
+			addTodoItem(title);
+			setTitle('');
+			setMessage('');
+		} else {
+			setMessage('Please add item.');
+		}
 	};
 	return (
 		<>
